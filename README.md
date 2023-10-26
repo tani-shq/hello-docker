@@ -18,6 +18,14 @@ This is a simple golang project which starts up a http server on port 4000. On o
     go run main.go
     ```
 
+## Build an executable binary
+
+* To build an executable binary that can run on any linux environment:
+    ```
+    go build -o hello-docker
+    ./hello-docker
+    ```
+
 ## Environment Variable
 
 **DISPLAY_TEXT** : To modify the output text to be printed

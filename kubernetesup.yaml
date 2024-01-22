@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment1
+  labels:
+    app: new
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: new
+  template:
+    metadata:
+      labels:
+        app: new
+    spec:
+      containers:
+      - name: container1
+        image: tanishq079/hello-docker:latest
+        ports:
+        - containerPort: 8080
+

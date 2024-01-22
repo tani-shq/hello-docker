@@ -15,11 +15,11 @@ func main() {
 	log.Println("Golang API")
 	log.Println("Initializing Environment Variables")
 	godotenv.Load()
-	log.Println("Listening on localhost:4000")
+	log.Println("Listening on localhost:8080")
 	r := mux.NewRouter()
 	r.HandleFunc("/", serveHome).Methods("GET")
 
-	log.Fatal(http.ListenAndServe(":4000", r))
+	log.Fatal(http.ListenAndServe(":8080", r))
 }
 
 // controllers
